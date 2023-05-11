@@ -3,13 +3,14 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
+	'lua-ls',
 	'tsserver',
 	'eslint',
-	'lua_ls',
 	'rust_analyzer',
+	'cssls'
 })
 
--- Fix Undefined global 'vim'
+-- -- Fix Undefined global 'vim'
 lsp.configure('lua_ls', {
 	settings = {
 		Lua = {
